@@ -401,6 +401,7 @@ public class Lab3 {
 	static int totaltime;
 	static int carcount=2;
 	static int hercount=2;
+	static int maxtime=0;
 	int flag=0;
 	int flag2=0;
 	
@@ -451,6 +452,12 @@ public class Lab3 {
 	    queue.add(h2);  
 	    queue.add(c1);  
 	    queue.add(c2);  
+	    for(animal b:queue){
+	    	if(b.time>maxtime){
+	    		maxtime=b.time;
+	    	}
+	    	
+	    }
 	    
 	    for(int i=0;i<totaltime;i++){
 	    	if(queue.isEmpty()!=true){
@@ -468,6 +475,8 @@ public class Lab3 {
 	    		System.out.println("It’s health after taking turn is "+test.health);
 	    		if(test.health>0){
 	    			queue.add(test);
+    				test.time=(int)( maxtime+ (Math.random() * ( totaltime-maxtime )));
+
 	    			hercount++;
 	    		}
 	    		else{
@@ -484,7 +493,7 @@ public class Lab3 {
 		    		test.turn(carcount,h1,h2,one,two);
 		    		System.out.println("It’s health after taking turn is "+test.health);
 		    		if(test.health>0){
-	    				test.time=(int) (Math.random() * ( totaltime - test.time ));
+	    				test.time=(int)( maxtime+ (Math.random() * ( totaltime-maxtime )));
 		    			queue.add(test);
 		    			carcount++;
 		    		}
@@ -499,7 +508,7 @@ public class Lab3 {
 
 
 		
-
+	    //System.out.println(maxtime);
 
 
 		
