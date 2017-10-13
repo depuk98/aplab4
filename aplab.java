@@ -64,7 +64,7 @@ class herbivorous extends animal{
 herbivorous(int l, int m, int n, int o,int p,int k,int ll) {
 		super(l, m, n, o,0,k);
 		grasscap=p;
-		turning=ll;
+		turning=ll;//galat hai
 	}
 
 	 void turn(int ancount, animal c1, animal c2, grassland gone,grassland gtwo){
@@ -472,7 +472,7 @@ public class Lab3 {
 	    		}
 
 	    		test.turn(carcount,c1,c2,one,two);
-	    		System.out.println("It’s health after taking turn is "+test.health);
+	    		System.out.println("ItÂ’s health after taking turn is "+test.health);
 	    		if(test.health>0){
 	    			queue.add(test);
     				test.time=(int)( maxtime+ (Math.random() * ( totaltime-maxtime )));
@@ -491,7 +491,7 @@ public class Lab3 {
 		    		
 
 		    		test.turn(carcount,h1,h2,one,two);
-		    		System.out.println("It’s health after taking turn is "+test.health);
+		    		System.out.println("ItÂ’s health after taking turn is "+test.health);
 		    		if(test.health>0){
 	    				test.time=(int)( maxtime+ (Math.random() * ( totaltime-maxtime )));
 		    			queue.add(test);
